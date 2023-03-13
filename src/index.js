@@ -27,4 +27,4 @@ class Toggle extends React.Component {
   }
 }
 
-root.render(button);
+root.render(<h1>Hwllo</h1>);
