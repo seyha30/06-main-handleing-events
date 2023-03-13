@@ -27,4 +27,30 @@ class Toggle extends React.Component {
   }
 }
 
-root.render(<h1>Hwllo</h1>);
+class LoggingButton extends React.Component {
+  // This syntax ensures `this` is bound within handleClick.
+  handleClick = () => {
+    console.log("this is:", this);
+  };
+  render() {
+    return <button onClick={this.handleClick}>Click me</button>;
+  }
+}
+
+class LoggingButton1 extends React.Component {
+  handleClick() {
+    console.log("this is:", this);
+  }
+
+  render() {
+    // This syntax ensures `this` is bound within handleClick
+    return <button onClick={() => this.handleClick()}> Click me</button>;
+  }
+}
+
+root.render(
+  <div>
+    <button onClick={(e) => this.deleteRow(id, e)}>Delete Row</button>
+    <button onClick={this.deleteRow.bind(this, id)}>Delete Row</button>
+  </div>
+);
