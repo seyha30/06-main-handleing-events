@@ -3,11 +3,6 @@ import ReactDOM from "react-dom/client";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const button = <button onClick="activateLasers">Activate Lasers</button>;
-function activateLasers() {
-  console.log(111);
-}
-
 class Toggle extends React.Component {
   constructor(props) {
     super(props);
