@@ -50,7 +50,9 @@ class LoggingButton1 extends React.Component {
 
 root.render(
   <div>
-    <button onClick={(e) => this.deleteRow(id, e)}>Delete Row</button>
-    <button onClick={this.deleteRow.bind(this, id)}>Delete Row</button>
+    <LoggingButton />
+    <LoggingButton1 />
+    <button>Delete Row</button>
+    <button>Delete Row</button>
   </div>
 );
